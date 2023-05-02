@@ -55,6 +55,11 @@ public class CharacterMovement : MonoBehaviour
 
         forwardSpeed = Mathf.Lerp(forwardSpeed, maxSpeed, Time.deltaTime * acceleration);
         transform.position += Vector3.right * forwardSpeed * Time.deltaTime;
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
     private void FixedUpdate()
     {
